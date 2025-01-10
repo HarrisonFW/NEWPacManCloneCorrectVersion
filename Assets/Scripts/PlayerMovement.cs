@@ -4,38 +4,38 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Code for flipping player sprite provided by bendux on Youtube. https://www.youtube.com/watch?v=K1xZ-rycYY8
+    //Code for flipping player sprite provided by Dani Krossing on Youtube: https://www.youtube.com/watch?v=Cr-j7EoM8bg
 
     //Code for Player movement provided by PantsOnLava on Youtube: https://www.youtube.com/watch?v=34fgsJ2-WzM
 
-    private bool isFacingRight = false;
-    private float horizontal;
 
-    public float moveSpeed;
+
+    public float moveSpeed; // public float so the players speed can be modified in the inspector
     float speedX, speedY;
-    Rigidbody2D rb;
+    Rigidbody2D rb; // assigns the RigidBody2D component to the value "rb"
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); // allows unity to access the Player's rigid body component
     }
 
     private void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
+        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed; //uses the Horizontal movement keys (left & right arrow, A & D)
+        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;   // uses the vertical movement keys (up & down arroww, W & S)
         rb.velocity = new Vector2(speedX, speedY);
-    }
 
-    private void Flip()
-    {
-        if (isFacingRight && horizontal <0f || !isFacingRight && horizontal > 0f)
+        if(speedX > 0)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            gameObject.transform.localScale = new Vector3((float)0.7319449, (float)0.7319449, 1);
+        }
+       
+        else if(speedX < 0) //Both the X & Y are a specific scale so that the player dosen't grow in size when the code for flipping its sprite runs
+        {
+            gameObject.transform.localScale = new Vector3((float)-0.7319449, (float)0.7319449, 1);
         }
     }
+
+   
 
 }
