@@ -43,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Pill"))
+        if (other.gameObject.CompareTag("Pill")) //compares what tags the player is colliding with
         {
-            Destroy(other.gameObject);
-            pm.PillCount++;
+            Destroy(other.gameObject); // destroyes the pill collided with
+            pm.PillCount++; //incriments the amount of pills by 1
         }
     }
 
