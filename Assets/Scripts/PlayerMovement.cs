@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CoinManager pm;
 
-
+    public AudioSource eatingSound;
 
     //Code for flipping player sprite provided by Dani Krossing on Youtube: https://www.youtube.com/watch?v=Cr-j7EoM8bg
 
@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        eatingSound = GetComponent<AudioSource>();
+
         rb = GetComponent<Rigidbody2D>(); // allows unity to access the Player's rigid body component
     }
 
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pill")) //compares what tags the player is colliding with
         {
+            eatingSound.Play();
             Destroy(other.gameObject); // destroyes the pill collided with
             pm.PillCount++; //incriments the amount of pills by 1
         }

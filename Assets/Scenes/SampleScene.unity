@@ -1900,6 +1900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pm: {fileID: 626192677}
+  eatingSound: {fileID: 920419984}
   moveSpeed: 10
 --- !u!82 &920419984
 AudioSource:
@@ -1911,7 +1912,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bc41c528c93ea564abf8ee02f520003e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 42431aac125288a42a1e2624c2ee6654, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
