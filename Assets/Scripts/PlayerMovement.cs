@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public CoinManager pm;
+
+
+
     //Code for flipping player sprite provided by Dani Krossing on Youtube: https://www.youtube.com/watch?v=Cr-j7EoM8bg
 
     //Code for Player movement provided by PantsOnLava on Youtube: https://www.youtube.com/watch?v=34fgsJ2-WzM
@@ -36,6 +41,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Pill"))
+        {
+            Destroy(other.gameObject);
+            pm.PillCount++;
+        }
+    }
 
 }
