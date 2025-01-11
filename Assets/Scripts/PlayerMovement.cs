@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        eatingSound = GetComponent<AudioSource>();
+        eatingSound = GetComponent<AudioSource>(); // code relating to playing the eating sound from M Murad Iqbal - Tech Nuggets - Javangelist on Youtube: https://www.youtube.com/watch?v=yE0JdtVTnVk
 
         rb = GetComponent<Rigidbody2D>(); // allows unity to access the Player's rigid body component
     }
