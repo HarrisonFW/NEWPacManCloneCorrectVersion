@@ -4,7 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
-public class CoinManager : MonoBehaviour
+public class PillManager : MonoBehaviour
 {
 
     //Collectible code provided by MoreBBlakeyyy on Youtube: https://www.youtube.com/watch?v=5GWRPwuWtsQ

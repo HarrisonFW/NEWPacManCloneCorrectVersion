@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public CoinManager pm;
+    public PillManager pm;
 
     public AudioSource eatingSound;
 
