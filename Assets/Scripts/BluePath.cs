@@ -5,17 +5,57 @@ using UnityEngine;
 public class BluePath : MonoBehaviour
 {
 
+    public Transform[] patrolPoints;
+    public int targetPoint;
+    public float speed;
+
+
+    private void Start()
+    {
+        targetPoint = 0;
+
+        
+    }
+
+
+    private void Update()
+    {
+        if (transform.position == patrolPoints[targetPoint].position)
+        {
+            increaseTargetInt();
+        }
+
+
+
+        transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
+
+        
+    }
+
+
+    void increaseTargetInt()
+    {
+        targetPoint++;
+
+        if(targetPoint >= patrolPoints.Length)
+        {
+            targetPoint = 0;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     /*[SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject pathPrefab;
-
-
-
-
-
-   
-
-
-
 
 
     //params
@@ -42,10 +82,6 @@ public class BluePath : MonoBehaviour
             return waveWaypoints;
         }
 
-
-
-
-
     }
 
     private void Update()
@@ -69,18 +105,6 @@ public class BluePath : MonoBehaviour
        
     }
 */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
