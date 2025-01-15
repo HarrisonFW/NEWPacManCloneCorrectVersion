@@ -23,13 +23,13 @@ public class BluePath : MonoBehaviour
 
     private void Update()
     {
-
+                                                // gets the position of the enemy to go to the position of the next point in the array
         transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
 
 
         if (transform.position == patrolPoints[targetPoint].position)
         {
-            increaseTargetInt();
+            increaseTargetInt(); // once the nemey reaches the position of a target point, runs this code
         }
 
     }
@@ -37,11 +37,11 @@ public class BluePath : MonoBehaviour
 
     void increaseTargetInt()
     {
-        targetPoint++;
+        targetPoint++; // adds 1 to the current target point to correctly incriment it for the enemy to follow the next point in the seris
 
-        if (targetPoint >= patrolPoints.Length)
+        if (targetPoint >= patrolPoints.Length) 
         {
-            targetPoint = 0;
+            targetPoint = 0; // once the enemy reaches it's final point, its next target point is zero to prevent a runtime error
         }
     }
 
