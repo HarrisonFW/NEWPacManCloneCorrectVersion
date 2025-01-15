@@ -5,6 +5,9 @@ using UnityEngine;
 public class BluePath : MonoBehaviour
 {
 
+    //pathing code provided by MoreBBlakeyyy on Youtube: https://www.youtube.com/watch?v=4mzbDk4Wsmk&t=443s
+    //I tried to follow the code from the shmup program we did but it did not work
+
     public Transform[] patrolPoints;
     public int targetPoint;
     public float speed;
@@ -14,22 +17,21 @@ public class BluePath : MonoBehaviour
     {
         targetPoint = 0;
 
-        
+        //transform.position = patrolPoints[targetPoint].transform.position;
     }
 
 
     private void Update()
     {
+
+        transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
+
+
         if (transform.position == patrolPoints[targetPoint].position)
         {
             increaseTargetInt();
         }
 
-
-
-        transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
-
-        
     }
 
 
@@ -37,12 +39,13 @@ public class BluePath : MonoBehaviour
     {
         targetPoint++;
 
-        if(targetPoint >= patrolPoints.Length)
+        if (targetPoint >= patrolPoints.Length)
         {
             targetPoint = 0;
         }
     }
 
+}
 
 
 
@@ -50,61 +53,15 @@ public class BluePath : MonoBehaviour
 
 
 
+  
 
 
 
 
-    /*[SerializeField] GameObject enemyPrefab;
-    [SerializeField] GameObject pathPrefab;
 
 
-    //params
-    int waypointIndex = 0;
-    [SerializeField] float enemyMoveSpeed = 2f;
 
-    //cached refs
-    List<Transform> waypoints;
    
 
-    private void Start()
-    {
-        // waypoint = BluePath.GetWayPoints();
-
-        public List<Transform> GetWayPoints()
-        {
-            var waveWaypoints = new List<Transform>();
-
-            foreach (Transform waypoint in pathPrefab.transform)
-            {
-                waveWaypoints.Add(waypoint);
-            }
-
-            return waveWaypoints;
-        }
-
-    }
-
-    private void Update()
-    {
-        MoveEnemyOnPath();
-    }
-
-    private void MoveEnemyOnPath()
-    {
-        if (waypointIndex <= waypoints.Count - 1)
-        {
-            var targetWaypointPosition = waypoints[waypointIndex].transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, targetWaypointPosition, enemyMoveSpeed * Time.deltaTime);
-
-            if (transform.position == targetWaypointPosition)
-            {
-                waypointIndex++;
-            }
-        }
-
-       
-    }
-*/
 
 
-}
