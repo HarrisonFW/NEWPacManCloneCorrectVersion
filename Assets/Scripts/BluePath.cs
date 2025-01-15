@@ -23,6 +23,7 @@ public class BluePath : MonoBehaviour
 
     private void Update()
     {
+      
                                                 // gets the position of the enemy to go to the position of the next point in the array
         transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
 
