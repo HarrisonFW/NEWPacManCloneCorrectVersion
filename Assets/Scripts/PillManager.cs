@@ -13,6 +13,9 @@ public class PillManager : MonoBehaviour
 
     public Text pillText;
 
+    public int liveCount = 3; // the lives are predefined 
+
+    public Text livesText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,9 @@ public class PillManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        livesText.text = "Lives: " + liveCount.ToString(); // updates the Lives text
+        
+        
         pillText.text = "Pills Eaten: " + PillCount.ToString(); //updates the UI with the preface "Pills Eaten"
     }
 }

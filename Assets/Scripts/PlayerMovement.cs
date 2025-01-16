@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource eatingSound;
 
+   
+
     //Code for flipping player sprite provided by Dani Krossing on Youtube: https://www.youtube.com/watch?v=Cr-j7EoM8bg
 
     //Code for Player movement provided by PantsOnLava on Youtube: https://www.youtube.com/watch?v=34fgsJ2-WzM
@@ -50,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
             eatingSound.Play();
             Destroy(other.gameObject); // destroyes the pill collided with
             pm.PillCount++; //incriments the amount of pills by 1
+        }
+
+        else if (other.gameObject.CompareTag("Booman")) //this code I figured out on my own based on
+        {                                               //previous code I wrote above
+            pm.liveCount--;                             // subtracts a life
         }
     }
 
