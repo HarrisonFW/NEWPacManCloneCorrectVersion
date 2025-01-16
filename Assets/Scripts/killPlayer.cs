@@ -41,9 +41,9 @@ public class killPlayer : MonoBehaviour
         {                               // it teleports him to this "spawnpoint" and subtracts a life
                                         // manage3d in the PlayerMovement Script
 
-            /*Pac.transform.position = new Vector3(0, (float)-3.98, 0);
+            Pac.transform.position = new Vector3(0, (float)-3.98, 0);
 
-            Yellow.transform.position = new Vector3((float)-25.14419, (float)-1.105154, 0);
+           /* Yellow.transform.position = new Vector3((float)-25.14419, (float)-1.105154, 0);
             Orange.transform.position = new Vector3((float)3.545809, (float)3.494846, 0);
             Blue.transform.position = new Vector3((float)0.9958093, (float)3.48486, 0);
             Green.transform.position = new Vector3((float)29.65581, (float)7.564846, 0);
