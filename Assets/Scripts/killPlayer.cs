@@ -20,13 +20,13 @@ public class killPlayer : MonoBehaviour
 
     public BluePath pathingScript;
 
-    
+    public AudioSource obnoxiousHurtSound;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        obnoxiousHurtSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,6 +40,10 @@ public class killPlayer : MonoBehaviour
         if (other.CompareTag("Player")) //This code below is from Me, instead of destroying Pac,
         {                               // it teleports him to this "spawnpoint" and subtracts a life
                                         // manage3d in the PlayerMovement Script
+            obnoxiousHurtSound.Play();
+
+
+
 
             Pac.transform.position = new Vector3(0, (float)-3.98, 0);
 
