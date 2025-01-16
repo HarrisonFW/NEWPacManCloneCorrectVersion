@@ -788,6 +788,16 @@ PrefabInstance:
       propertyPath: pathingScript
       value: 
       objectReference: {fileID: 1424881105}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: obnoxiousHurtSound
+      value: 
+      objectReference: {fileID: 1424881109}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: gameOverNoise
+      value: 
+      objectReference: {fileID: 1424881110}
     - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Name
@@ -1146,6 +1156,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8409728446750154081}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &131844159 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -6881116076546110154, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 8409728446750154081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &131844160 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -5117954920259891998, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 8409728446750154081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &150433218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4943257388758968806, guid: c2099365c2605bf4ea8e448fe3280ba4,
@@ -1471,6 +1493,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684b9f5b41cb986499a44e7dfb423162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &232904481 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -6881116076546110154, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 523555007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &232904482 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -5117954920259891998, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 523555007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &236909557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3304,6 +3338,16 @@ PrefabInstance:
       propertyPath: pathingScript
       value: 
       objectReference: {fileID: 232904477}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: obnoxiousHurtSound
+      value: 
+      objectReference: {fileID: 232904481}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: gameOverNoise
+      value: 
+      objectReference: {fileID: 232904482}
     - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Name
@@ -3900,6 +3944,16 @@ PrefabInstance:
       propertyPath: pathingScript
       value: 
       objectReference: {fileID: 1341946187}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: obnoxiousHurtSound
+      value: 
+      objectReference: {fileID: 1341946191}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: gameOverNoise
+      value: 
+      objectReference: {fileID: 1341946192}
     - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Name
@@ -8799,6 +8853,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684b9f5b41cb986499a44e7dfb423162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1341946191 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -6881116076546110154, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 618596393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1341946192 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -5117954920259891998, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 618596393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1344233755
 GameObject:
   m_ObjectHideFlags: 0
@@ -9063,6 +9129,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684b9f5b41cb986499a44e7dfb423162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1424881109 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -6881116076546110154, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 75419831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1424881110 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -5117954920259891998, guid: f76018d382b2a3344888f466df814113,
+    type: 3}
+  m_PrefabInstance: {fileID: 75419831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1430708802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13670,6 +13748,16 @@ PrefabInstance:
       propertyPath: pathingScript
       value: 
       objectReference: {fileID: 131844154}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: obnoxiousHurtSound
+      value: 
+      objectReference: {fileID: 131844159}
+    - target: {fileID: -3008720121092368957, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: gameOverNoise
+      value: 
+      objectReference: {fileID: 131844160}
     - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Name
@@ -13733,12 +13821,12 @@ PrefabInstance:
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.1690197
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.061814964
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}

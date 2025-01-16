@@ -21,12 +21,15 @@ public class killPlayer : MonoBehaviour
     public BluePath pathingScript;
 
     public AudioSource obnoxiousHurtSound;
+    public AudioSource gameOverNoise;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        obnoxiousHurtSound = GetComponent<AudioSource>();
+        obnoxiousHurtSound = GetComponent<AudioSource>(); //audio from Pixabay
+
+        gameOverNoise = GetComponent<AudioSource>(); // this audio from Pixabay
     }
 
     // Update is called once per frame
@@ -93,7 +96,9 @@ public class killPlayer : MonoBehaviour
 
         else if (pm.liveCount < 0) //Only when life count reaches -1, then the scene resets
         {
-            SceneManager.LoadScene(Respawn);
+            gameOverNoise.Play();
+            SceneManager.LoadScene(Respawn); // I knew this wasn't going to work, so for now the sound just plays on awake, sorry it's so loud
+            gameOverNoise.PlayDelayed(1f);
         }
     }
 
