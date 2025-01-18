@@ -994,6 +994,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1344233756}
+    - target: {fileID: 8409728446679323996, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: isPurpleActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3823,6 +3828,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1378768183}
+    - target: {fileID: 8409728446679323996, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: isPurpleActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4469,6 +4479,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1563333137}
+    - target: {fileID: 8409728446679323996, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: isPurpleActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7690,6 +7705,16 @@ PrefabInstance:
       propertyPath: Purple
       value: 
       objectReference: {fileID: 512835923}
+    - target: {fileID: 8409728446679323992, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409728446679323992, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Name
@@ -7882,6 +7907,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[26]
       value: 
       objectReference: {fileID: 955528552}
+    - target: {fileID: 8409728446679323996, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: isPurpleActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14802,6 +14832,11 @@ PrefabInstance:
       propertyPath: speedUpWOOSHNoise
       value: 
       objectReference: {fileID: 626192678}
+    - target: {fileID: 6883284628675271883, guid: f5e9efc63d93ee94b9e5c176ac555624,
+        type: 3}
+      propertyPath: purpleEnemy
+      value: 
+      objectReference: {fileID: 512835923}
     - target: {fileID: 6883284628675271885, guid: f5e9efc63d93ee94b9e5c176ac555624,
         type: 3}
       propertyPath: m_Name
@@ -14925,6 +14960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409728446679323996, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: isPurpleActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323997, guid: f76018d382b2a3344888f466df814113,
         type: 3}

@@ -12,6 +12,7 @@ public class BluePath : MonoBehaviour
     public int targetPoint;
     public float speed;
 
+    public bool isActive = true;
 
     private void Start()
     {
@@ -23,8 +24,14 @@ public class BluePath : MonoBehaviour
 
     private void Update()
     {
-      
-                                                // gets the position of the enemy to go to the position of the next point in the array
+        if (!isActive)
+        {
+            return;
+        }
+
+        MoveEnemy();
+        
+        // gets the position of the enemy to go to the position of the next point in the array
         transform.position = Vector3.MoveTowards(transform.position, patrolPoints[targetPoint].position, speed * Time.deltaTime);
 
 
@@ -32,6 +39,9 @@ public class BluePath : MonoBehaviour
         {
             increaseTargetInt(); // once the nemey reaches the position of a target point, runs this code
         }
+
+        
+
 
     }
 
@@ -45,6 +55,14 @@ public class BluePath : MonoBehaviour
             targetPoint = 0; // once the enemy reaches it's final point, its next target point is zero to prevent a runtime error
         }
     }
+
+    private void MoveEnemy()
+    {
+        Debug.Log(gameObject.name + " is moving");
+    }
+
+
+
 
 }
 

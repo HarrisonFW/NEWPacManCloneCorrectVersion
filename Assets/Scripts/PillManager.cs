@@ -32,8 +32,26 @@ public class PillManager : MonoBehaviour
 
     public Text SpeedUpText;
     public AudioSource speedUpWOOSHNoise;
+
+    public GameObject purpleEnemy;
+    private BluePath purpleEnemyScript;
+    private bool purpleActivated = false;
+
     void Start()
     {
+        // Get the BluePath script from the Purple Booman
+        purpleEnemyScript = purpleEnemy.GetComponent<BluePath>();
+
+        // Ensure Purple starts inactive
+        if(purpleEnemyScript != null)
+        {
+            purpleEnemyScript.isActive = false; // Freeze enemy at start
+            Debug.Log("Purple Booman starts inactive");
+        }
+
+
+
+
         // Initial UI updates
         UpdateUI();
     }
@@ -44,7 +62,7 @@ public class PillManager : MonoBehaviour
         UpdateUI();
 
         // Check if PillCount exceeds 5 and ensure speed increases only once
-        if (PillCount > 31 && !speedIncreased)
+        if (PillCount >= 32 && !speedIncreased)
         {
             IncreaseEnemySpeeds();
             speedIncreased = true; // Prevent further speed increases
@@ -53,7 +71,25 @@ public class PillManager : MonoBehaviour
 
             speedUpWOOSHNoise.Play();
         }
+
+        if (PillCount >= 48 && !purpleActivated)
+        {
+            ActivatePurpleEnemy();
+        }
+
     }
+
+    private void ActivatePurpleEnemy()
+    {
+        if (purpleEnemyScript != null)
+        {
+            purpleEnemyScript.isActive = true;
+            Debug.Log("Purple Booman activated");
+        }
+
+        purpleActivated = true;
+    }
+
 
     private void UpdateUI()
     {
