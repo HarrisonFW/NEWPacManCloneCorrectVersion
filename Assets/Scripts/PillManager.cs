@@ -33,6 +33,9 @@ public class PillManager : MonoBehaviour
     public Text SpeedUpText;
     public AudioSource speedUpWOOSHNoise;
 
+    //All code for displaying text written after the one for displaying
+    //the Pills text was done by me and me alone, same with adding sounds after the initial code provided
+    //So at the very least I can add sounds to play and append text boxes in code
     public GameObject purpleEnemy;
     private BluePath purpleEnemyScript;
     private bool purpleActivated = false;

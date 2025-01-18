@@ -12,7 +12,8 @@ public class BluePath : MonoBehaviour
     public int targetPoint;
     public float speed;
 
-    public bool isActive = true;
+    public bool isActive = true; //ChatGPT also helped in providing the code for activating the purple
+                                 // Booman after collecting 48 pills
 
     private void Start()
     {
