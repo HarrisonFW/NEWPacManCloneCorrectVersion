@@ -31,7 +31,7 @@ public class PillManager : MonoBehaviour
     private bool speedIncreased = false; // Ensure speed is increased only once
 
     public Text SpeedUpText;
-
+    public AudioSource speedUpWOOSHNoise;
     void Start()
     {
         // Initial UI updates
@@ -50,6 +50,8 @@ public class PillManager : MonoBehaviour
             speedIncreased = true; // Prevent further speed increases
 
             SpeedUpText.text = "Boomen Speed Increase";
+
+            speedUpWOOSHNoise.Play();
         }
     }
 
