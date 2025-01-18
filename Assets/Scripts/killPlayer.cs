@@ -15,6 +15,8 @@ public class killPlayer : MonoBehaviour
     public GameObject Orange;
     public GameObject Blue;
     public GameObject Green;
+    public GameObject Purple;
+
 
     public PillManager pm; // communicates and defines the PillManager script as "pm"
 
@@ -62,7 +64,7 @@ public class killPlayer : MonoBehaviour
             Orange.transform.position = new Vector3((float)3.545809, (float)3.494846, 0);   // what I was trying to do is have ALL the ghosts' positions reset when ANY of them collide with pacman, apparently a Vector3 cannont be comined with boolean operanda
             Blue.transform.position = new Vector3((float)0.9950893, (float)3.48486, 0);     // and so after trying to figure out how to splice the two for too long, I asked ChatGPT for help and it provided me a solution that works resonably well
             Green.transform.position = new Vector3((float)29.65581, (float)7.564846, 0);    // all these points are roughly where I've decided each ghosts spawn point is, and they return to them when any of the ghosts touch the player,
-                                                                                            // this is to prevent them from immidietly taking another life away from pacman when he has his position reset.
+            Purple.transform.position = new Vector3((float)-31.84419, (float)3.004846, 0);                                                                       // this is to prevent them from immidietly taking another life away from pacman when he has his position reset.
             // Reset target points for all enemies
             BluePath bluePathScript = Blue.GetComponent<BluePath>();
             if (bluePathScript != null)
@@ -90,6 +92,12 @@ public class killPlayer : MonoBehaviour
 
                 //SceneManager.LoadScene(Respawn); <-- remnants of MoreBBlakeyyy's code which normally just
                 // reset the scene after the player collided with the Boomen.
+            }
+
+            BluePath purplePathScript = Purple.GetComponent<BluePath>();
+            if (purplePathScript != null)
+            {
+                purplePathScript.targetPoint = 0;
             }
 
         } // the reason I opted for teleporting the player and ghosts is so that I can add noises that aren't cut short if the scene is reset or if the player is destroyed
