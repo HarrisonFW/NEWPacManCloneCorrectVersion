@@ -36,7 +36,8 @@ public class PillManager : MonoBehaviour
     public GameObject purpleEnemy;
     private BluePath purpleEnemyScript;
     private bool purpleActivated = false;
-
+    public AudioSource ghostWakeUp;
+    public Text purpleBoomanAwokenText;
     void Start()
     {
         // Get the BluePath script from the Purple Booman
@@ -85,6 +86,10 @@ public class PillManager : MonoBehaviour
         {
             purpleEnemyScript.isActive = true;
             Debug.Log("Purple Booman activated");
+
+            ghostWakeUp.Play();
+
+            purpleBoomanAwokenText.text = ("Purple Booman Awoken");
         }
 
         purpleActivated = true;

@@ -60,11 +60,19 @@ public class killPlayer : MonoBehaviour
             pathingScript.targetPoint = 0;*/
 
             // Reset positions for all enemies
+
+            // IMPORTANT for some reason when uncommented, the code for resetting the Purple Booman's position
+            //when Pac gets hit, teleports him to a spot on the upper left side of the maze, acting as an
+            //immovable obstacle. I have no idea why this happens as no code tells him to go to this spot
+            //nor are the coordinates that he teleports to mentioned anywhere in any of my scripts???
+            //For now, Purple Booman ignores the code that resets his position when Pac touches an enemy,
+            //even after his activation
+
             Yellow.transform.position = new Vector3((float)-25.14419, (float)-1.105154, 0);  //Thank you ChatGPT for helping me with this code
             Orange.transform.position = new Vector3((float)3.545809, (float)3.494846, 0);   // what I was trying to do is have ALL the ghosts' positions reset when ANY of them collide with pacman, apparently a Vector3 cannont be comined with boolean operanda
             Blue.transform.position = new Vector3((float)0.9950893, (float)3.48486, 0);     // and so after trying to figure out how to splice the two for too long, I asked ChatGPT for help and it provided me a solution that works resonably well
             Green.transform.position = new Vector3((float)29.65581, (float)7.564846, 0);    // all these points are roughly where I've decided each ghosts spawn point is, and they return to them when any of the ghosts touch the player,
-            Purple.transform.position = new Vector3((float)-31.84419, (float)3.004846, 0);                                                                       // this is to prevent them from immidietly taking another life away from pacman when he has his position reset.
+           // Purple.transform.position = new Vector3((float)-27.9, (float)-0.42, 0);                                                                       // this is to prevent them from immidietly taking another life away from pacman when he has his position reset.
             // Reset target points for all enemies
             BluePath bluePathScript = Blue.GetComponent<BluePath>();
             if (bluePathScript != null)
@@ -94,11 +102,11 @@ public class killPlayer : MonoBehaviour
                 // reset the scene after the player collided with the Boomen.
             }
 
-            BluePath purplePathScript = Purple.GetComponent<BluePath>();
+            /*BluePath purplePathScript = Purple.GetComponent<BluePath>();
             if (purplePathScript != null)
             {
                 purplePathScript.targetPoint = 0;
-            }
+            }*/
 
         } // the reason I opted for teleporting the player and ghosts is so that I can add noises that aren't cut short if the scene is reset or if the player is destroyed
 
