@@ -8,6 +8,8 @@ public class BluePath : MonoBehaviour
     //pathing code provided by MoreBBlakeyyy on Youtube: https://www.youtube.com/watch?v=4mzbDk4Wsmk&t=443s
     //I tried to follow the code from the shmup program we did but it did not work
 
+    //Cashed References
+
     public Transform[] patrolPoints;
     public int targetPoint;
     public float speed;
@@ -25,7 +27,8 @@ public class BluePath : MonoBehaviour
 
     private void Update()
     {
-        if (!isActive)
+        if (!isActive) // if the "isActive" boolean is false, this statement returns and dosen't execute the rest of the code, this is because every booman has this
+                       // boolean in the inspector, just the only one with it not ticked is the purple booman
         {
             return;
         }
@@ -47,7 +50,7 @@ public class BluePath : MonoBehaviour
     }
 
 
-    void increaseTargetInt()
+    void increaseTargetInt() // this adds 1 to the "target point" number so that each Booman knows the correct next target on their path to go to
     {
         targetPoint++; // adds 1 to the current target point to correctly incriment it for the enemy to follow the next point in the seris
 
@@ -57,7 +60,7 @@ public class BluePath : MonoBehaviour
         }
     }
 
-    private void MoveEnemy()
+    private void MoveEnemy() //sends a message to the debug log to let developer know that the enmemies are in fact moving
     {
         Debug.Log(gameObject.name + " is moving");
     }

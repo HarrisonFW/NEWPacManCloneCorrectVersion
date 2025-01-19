@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PillManager : MonoBehaviour
 {
-    public string GameWin;
+    
 
 
     //IMPORTANT Code here is provided by Chat GPT sinceI niavely thought that just trying to increase the
@@ -25,6 +25,8 @@ public class PillManager : MonoBehaviour
     //I try to impliment it, it seldom if ever does. Simple things have so many steps to them and it's
     // frustrating when I want to add or test out features when so many of them require basically a rewriting
     // of the whole program
+
+    //Cashed references, seperated depending on what they are chashing
 
     public int PillCount; // Pill Count is accessible by multiple scripts
     public Text pillText;
@@ -94,7 +96,7 @@ public class PillManager : MonoBehaviour
     }
 
 
-    public void NextSceneLoad()
+    public void NextSceneLoad() // this method loads the "GameWin" scene once the player eats 96 pills
     {
         SceneManager.LoadScene("GameWin");
     }
@@ -103,7 +105,8 @@ public class PillManager : MonoBehaviour
 
 
 
-    private void ActivatePurpleEnemy()
+    private void ActivatePurpleEnemy() // this method sets the purpleEnemyScript boolean to true
+                                       // and handles the text and noise playing to signify the player
     {
         if (purpleEnemyScript != null)
         {
@@ -119,13 +122,14 @@ public class PillManager : MonoBehaviour
     }
 
 
-    private void UpdateUI()
+    private void UpdateUI() // just a method to handle the UI for the constantly updating pills and lives text
     {
         livesText.text = "Lives: " + liveCount.ToString();
         pillText.text = "Pills Eaten: " + PillCount.ToString();
     }
 
-    private void IncreaseEnemySpeeds()
+    private void IncreaseEnemySpeeds() // a loop that goes through all the enemies to increase their speed
+                                       // again thankyou ChatGPT for help with code relating to this.
     {
         // Find all objects with the BluePath component
         BluePath[] allEnemies = FindObjectsOfType<BluePath>();

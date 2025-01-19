@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //Cashed References
     public PillManager pm;
 
-    public AudioSource eatingSound;
+    public AudioSource eatingSound; 
 
    
 
