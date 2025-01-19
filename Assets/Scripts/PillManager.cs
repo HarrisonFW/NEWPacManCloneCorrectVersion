@@ -4,8 +4,13 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
+
 public class PillManager : MonoBehaviour
 {
+    public string GameWin;
+
+
     //IMPORTANT Code here is provided by Chat GPT sinceI niavely thought that just trying to increase the
     //speed when pacman eats over a certain number of pills would be easy, So I had to ask chatGPT
     //a few times before it gave me some working code, but in doing so it seems to also have rewritten
@@ -81,7 +86,22 @@ public class PillManager : MonoBehaviour
             ActivatePurpleEnemy();
         }
 
+        if (PillCount >= 96)
+        {
+            NextSceneLoad();
+        }
+
     }
+
+
+    public void NextSceneLoad()
+    {
+        SceneManager.LoadScene("GameWin");
+    }
+
+
+
+
 
     private void ActivatePurpleEnemy()
     {

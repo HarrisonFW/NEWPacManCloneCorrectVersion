@@ -888,6 +888,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323994, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Sprite
@@ -3687,6 +3692,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323994, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Sprite
@@ -4338,6 +4348,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323994, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Sprite
@@ -6901,7 +6916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 626192677}
   eatingSound: {fileID: 920419984}
-  moveSpeed: 10
+  moveSpeed: 12
 --- !u!82 &920419984
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7915,6 +7930,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323994, guid: f76018d382b2a3344888f466df814113,
         type: 3}
       propertyPath: m_Sprite
@@ -15120,6 +15140,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BLUEBooman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409728446679323993, guid: f76018d382b2a3344888f466df814113,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8409728446679323994, guid: f76018d382b2a3344888f466df814113,
         type: 3}
